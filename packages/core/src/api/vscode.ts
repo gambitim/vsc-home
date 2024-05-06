@@ -8,7 +8,7 @@ export default function (core: ExecuteCore, instructions: string[], payload: obj
 }
 
 const run: Run = {
-  'openFolder': async ({ respond, vars: { USR_APP_DIR, WIDGETS_ROOT, LAYOUTS_ROOT } }, { path, type, newWindow = true }) => {
+  'openFolder': async ({ respond, vars: { USR_APP_DIR, WIDGETS_ROOT, LAYOUTS_ROOT } }, { path, type, newWindow = false }) => {
     if (path === "LAYOUTS_ROOT") { path = join(USR_APP_DIR, LAYOUTS_ROOT); };
     if (path === "WIDGETS_ROOT") { path = join(USR_APP_DIR, WIDGETS_ROOT); };
 
